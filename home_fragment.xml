@@ -1,0 +1,66 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+    <data>
+        <variable
+            name="viewModel"
+            type="com.example.progettopm.HomeViewModel" />
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/welcomeTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Suggerimenti per te:"
+                android:textStyle="bold"
+                android:paddingTop="12dp"
+                android:textSize="16sp" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/randomCapiRecyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="8dp" />
+
+            <TextView
+                android:id="@+id/emptyView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Nessun suggerimento per questa stagione"
+                android:gravity="center"
+                android:textSize="18sp"
+                android:paddingTop="20dp"
+                android:paddingBottom="20dp"
+                android:visibility="gone"/>
+
+            <TextView
+                android:id="@+id/totalCapiTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text='@{`Totale capi: ` + String.valueOf(viewModel.totaleCapi)}'
+                android:textSize="18sp"
+                android:paddingTop="16dp" />
+
+            <TextView
+                android:id="@+id/capiByStagioneTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text='@{viewModel.capiByStagione}'
+                android:paddingTop="8dp" />
+
+        </LinearLayout>
+    </ScrollView>
+</layout>

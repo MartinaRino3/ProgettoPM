@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:gravity="center"
+    android:padding="16dp"
+    android:background="@color/background"
+    tools:context=".LoginActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="160dp"
+            android:layout_height="160dp"
+            android:src="@drawable/logo" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="Smart Closet"
+            android:textColor="@color/beige"
+            android:fontFamily="@font/logo_font"
+            android:textSize="30sp"/>
+
+        <EditText
+            android:id="@+id/emailEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:background="@drawable/rounded_corner"
+            android:hint="Email"
+            android:inputType="text"
+            android:padding="18dp"
+            android:textColor="@color/beige"
+            android:textColorHint="@color/beige"
+            android:textSize="20sp" />
+        <EditText
+            android:id="@+id/passwordEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/rounded_corner"
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:padding="18dp"
+            android:textColor="@color/beige"
+            android:textColorHint="@color/beige"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/loginButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:background="@drawable/rounded_corner"
+            android:backgroundTint="@color/beige"
+            android:padding="18dp"
+            android:text="Login"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/registerLink"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Non hai un account? Registrati"
+            android:textColor="@color/beige"
+            android:textStyle="bold"
+            android:layout_gravity="center"
+            android:paddingTop="16dp" />
+
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="8dp"
+            android:gravity="center">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/googleSignInButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:backgroundTint="@android:color/transparent"
+                app:strokeWidth="0dp"
+                app:icon="@drawable/google"
+                app:iconTint="@null"
+                app:iconSize="48dp"
+                app:iconGravity="textStart"
+                app:iconPadding="0dp"
+                android:text=""
+                style="@style/Widget.MaterialComponents.Button.TextButton" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</RelativeLayout>
